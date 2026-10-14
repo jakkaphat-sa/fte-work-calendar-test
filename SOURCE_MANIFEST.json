@@ -1,0 +1,83 @@
+{
+  "version": "0.1.0",
+  "purpose": "Read-only GitHub Pages + Supabase pilot calendar; synthetic data, optional Google OAuth",
+  "verification": {
+    "javascript_tests_passed": 16,
+    "dom_asset_and_syntax_checks": true,
+    "postgres_sql_executed": false,
+    "supabase_live_tests": false,
+    "google_oauth_live_test": false,
+    "browser_visual_checks": false,
+    "deployed": false
+  },
+  "dependencies": {
+    "fullcalendar": "6.1.19",
+    "supabase-js": "2.117.3"
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "b118ad41671b999b93f177f2f997c6c1440380fd4404230f212a3112e44bcfdc"
+    },
+    {
+      "path": "README_TH.md",
+      "sha256": "94f861c03212956cf7ad06ac6695941eb87a844cef0951a0980a7555fd3c12ed"
+    },
+    {
+      "path": "docs/.nojekyll",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/app.js",
+      "sha256": "280aac39a57407ebe89348cff9e37b2b38c92655ab604da58e5d54dc0bb8ed2c"
+    },
+    {
+      "path": "docs/assets/faculty.png",
+      "sha256": "d5681a008f152a97185fec70581803c1cec2d5b78342cec5a29ad729ea9fd36f"
+    },
+    {
+      "path": "docs/config.js",
+      "sha256": "035189a46b9a3f3648a25b122628550df9c877dabd2d7310e459e1646cade30f"
+    },
+    {
+      "path": "docs/domain.js",
+      "sha256": "0dd2a6e3fa9c5a8f50cb8fb08f5712d9b94e837ab00f0c699af31d4b51a74136"
+    },
+    {
+      "path": "docs/index.html",
+      "sha256": "60c392a6aeec70685edb89eec4e8019c65087d24a4e807fa0088afa4d08ff98c"
+    },
+    {
+      "path": "docs/styles.css",
+      "sha256": "18cc34ca6a479cad0f5037470ec840c2403f409e054f8330df8a1b3c5fa62429"
+    },
+    {
+      "path": "package.json",
+      "sha256": "984df66b5d3c295d9eb1f50224c9389c7525724bfcbce2b6befb44819bac8b98"
+    },
+    {
+      "path": "supabase/01_schema.sql",
+      "sha256": "4c8360cb5155ae6e8954411a39580bee1f9c5408eb70d189cbd4253af0545d06"
+    },
+    {
+      "path": "supabase/02_sample_data.sql",
+      "sha256": "f11b07ed5035cf449e080a4bae33d285dcb72f5cf77bc8ae391d30e98657aefa"
+    },
+    {
+      "path": "supabase/03_grant_first_admin.sql",
+      "sha256": "9c9613a23d2b28c49ca45c3a261e92f8dd184fbbdec084f39649c96613e1b61e"
+    },
+    {
+      "path": "supabase/04_inspect_setup.sql",
+      "sha256": "198dc7135a63c42ac47eec2284613d9e6a1d1d49dbaeaa8d8ec4d61007d3bb72"
+    },
+    {
+      "path": "tests/client.test.js",
+      "sha256": "5121d762377928ef132fe587cadb48619b129435c207eb540583985935adc89e"
+    },
+    {
+      "path": "tests/domain.test.js",
+      "sha256": "ce6f43ea1fbaf8e0f3fd9174f8cd3bc7190420de78deb6815bebd11e056aba52"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>FTE Work Calendar — ระบบทดลอง</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.19/index.global.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.19/locales-all.global.min.js"></script>
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><img src="./assets/faculty.png" width="44" height="44" alt="ตราคณะครุศาสตร์อุตสาหกรรม"><div><strong>WORK CALENDAR</strong><small>ปฏิทินภาระงานคณะ</small></div></div>
+    <div class="sidebar-caption">WORKSPACE</div>
+    <div class="nav-current">ปฏิทินภาระงาน</div>
+    <h2 class="sidebar-caption">ฝ่ายรับผิดชอบ</h2>
+    <div id="sideDepartments" class="side-departments"></div>
+    <div class="sidebar-footer">FTE Work Calendar<small>คณะครุศาสตร์อุตสาหกรรม<br>มทร.อีสาน วิทยาเขตขอนแก่น</small></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><span class="organization">คณะครุศาสตร์อุตสาหกรรม</span><div class="account-area"><button id="themeButton" type="button" class="button secondary">โหมดมืด</button><span id="accountLabel" class="account-label">ผู้เยี่ยมชม</span><button id="loginButton" type="button" class="button secondary">เข้าสู่ระบบด้วย Google</button><button id="logoutButton" type="button" class="button secondary" hidden>ออกจากระบบ</button></div></header>
+    <main>
+      <div class="page-heading"><div><span class="eyebrow">WORKSPACE · ระบบทดลอง</span><h1>ปฏิทินภาระงาน</h1><p>ติดตามกำหนดการและผลดำเนินงานของแต่ละฝ่าย</p></div><span id="connectionLabel" class="connection-label" role="status">กำลังเตรียมข้อมูล…</span></div>
+      <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+      <section class="filters" aria-label="ตัวกรองปฏิทิน"><label for="departmentFilter">ฝ่ายรับผิดชอบ<select id="departmentFilter"><option value="">ทุกฝ่าย</option></select></label><button id="refreshButton" type="button" class="button secondary">รีเฟรชข้อมูล</button><span id="scopeLabel" class="scope-label"></span></section>
+      <section id="summary" class="summary-grid" aria-label="สรุปสถานะโครงการ"></section>
+      <section class="panel calendar-panel" aria-label="ปฏิทินเดือน"><div id="calendar"></div></section>
+      <section class="panel"><div class="section-heading"><h2>สรุปผลดำเนินงานรายฝ่ายของเดือน</h2><span id="monthLabel"></span></div><div class="table-scroll"><table class="summary-table"><thead><tr><th scope="col">ฝ่าย</th><th scope="col">ทั้งหมด</th><th scope="col">ยังไม่เริ่ม</th><th scope="col">กำลังทำ</th><th scope="col">รอตรวจรับ</th><th scope="col">เสร็จสิ้น</th><th scope="col">ยกเลิก</th><th scope="col">สำเร็จ (%)</th></tr></thead><tbody id="summaryRows"></tbody></table></div></section>
+      <footer>FTE Work Calendar · ชุดเริ่มต้น 0.1 <span>ปฏิทินสำหรับทดลองเชื่อมต่อ</span></footer>
+    </main>
+  </div>
+  <dialog id="projectDialog"><div class="dialog-heading"><h2 id="projectTitle"></h2><button id="closeDialog" type="button" class="button secondary">ปิด</button></div><dl><dt>ฝ่ายรับผิดชอบ</dt><dd id="projectDepartment"></dd><dt>กำหนดการ</dt><dd id="projectDates"></dd><dt>สถานะ</dt><dd id="projectStatus"></dd></dl></dialog>
+</body>
+</html>
